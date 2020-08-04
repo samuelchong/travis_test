@@ -46,12 +46,12 @@ deploy:
 #   overwrite: true
 on:
   tags: true
-#     repo: samuelchong/travis_test
-#     branches:
-#       only:
-#         - /master
-#         - /^development\/v.*$/
-#         - /^release\/v.*$/
-#         - /^feature\/.*$/
-#         - /^v.*$/
+  repo: samuelchong/travis_test
+  branches:
+    only:
+      - /master
+      - /^development\/v.*$/
+      - /^release\/v.*$/
+      - /^feature\/.*$/
+      - /^v.*$/
   
