@@ -1,5 +1,5 @@
 dist: trusty
-language: go
+# language: go
 
 go:
   - 1.12.x
@@ -10,8 +10,8 @@ branches:
     - /^feature\/.*$/
     - /^v.*$/
 
-env:
-  - GOMAXPROCS=4 GO111MODULE=on
+# env:
+#   - GOMAXPROCS=4 GO111MODULE=on
 git:
   submodules: true
 
