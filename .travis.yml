@@ -28,7 +28,7 @@ git:
 script:
   - go test -v ./...
 before_deploy:
-  - export TRAVIS_TAG="v2.3.6"
+  - export TRAVIS_TAG="v1.0.1"
 #   - export TRAVIS_COMMIT="dcdf8bd8af8d0144fb830cdccbf4ad048d946a9c"
   - git tag $TRAVIS_TAG 
   #- echo "$TRAVIS_TAG" "$TRAVIS_COMMIT"
