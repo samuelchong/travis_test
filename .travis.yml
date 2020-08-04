@@ -9,7 +9,7 @@ deploy:
   provider: releases
   api_key:
     secure: iuvw8dgg91MG80BXaZYHGORuU8p1R3wdF53TveExWEThMxyrpalD+7n3mpPkc5BKUv9ZsiwrwTEAD1qu2o1Ki6qVS+QlB2RqkvP2g8LV0sE9DB+lvGyYOkNEDd44kFLcoAmGkyQSWZuwaf/AW0AQx1i3BeK7lXzwcKJukLIW//0ACwwGNtE9g1YdyptiOD3WXIHV+fb0dpLzYezQsGhyWeSGiFqHLEfE0o0YuyOmf3majeQcrKHfpNW0VeLiGmij0TnMpKzij/lsqHJPJEcpdVObF0y4GfAW1Ur+IzER92l5lu+cDya/sX5aexwatRRA6YbUGy8+EcrM8C/YeWWNKbSe3ogd5rqP7Y0YWVpks7PpInS4T5J/8/KQHMlQy6lNPpQdroz/fNZ/xKXImNCQA8tpl9Ge0w2eGvuaF7NTUe4nbvNwoJSHTjP8JQVxumyjabkSe05WzC6QuKJcXuBFm6TI2OnxaKCqu2Knpcc6tO6KD0yBI8vZSvb5bFskY2JRCwP58oZ9kvhUHvaWmJh4Tn2T/W8Dog3Tm78KeaCLbZh9kZSmZbV3OA9bgdgIJ9cRZf8+cklHfn93wnaZqG66rBKJCWhtpVyIII4U5Ox/qW2LCzs9v/+kI0Fbn5h2S9PlEBtm2C5rWWYe+dlaZbbD1s0bO802QLnKGsuK7WxpwsA=
-  file: _bin/*
+  file: _bin/*.*
   on:
     repo: samuelchong/travis_test
     branch: development/v1.0
