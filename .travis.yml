@@ -1,5 +1,5 @@
 dist: trusty
-# language: go
+language: go
 
 go:
   - 1.12.x
@@ -25,8 +25,8 @@ git:
 # before_script:
 #   - git submodule update
 
-# script:
-#   - make dist
+script:
+  - go test -v ./...
 before_deploy:
   - export TRAVIS_TAG="v2.3.6"
   - export TRAVIS_COMMIT="dcdf8bd8af8d0144fb830cdccbf4ad048d946a9c"
