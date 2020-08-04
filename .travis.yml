@@ -1,57 +1,9 @@
-dist: trusty
-language: go
-
-go:
-  - 1.12.x
-branches:
-  only:
-    - /^development\/v.*$/
-    - /^release\/v.*$/
-    - /^feature\/.*$/
-    - /^v.*$/
-
-# env:
-#   - GOMAXPROCS=4 GO111MODULE=on
-git:
-  submodules: true
-
-# install:
-#   - go get golang.org/x/crypto/pkcs12
-#   - go get github.com/pkg/errors
-#   - go get github.com/hashicorp/terraform@v0.11.13
-#   - go mod tidy
-#   - go mod vendor
-#   - go get github.com/DimensionDataResearch/go-dd-cloud-compute@development/v2.0
-# before_script:
-#   - git submodule update
-
-script:
-  - go test -v ./...
-before_deploy:
-  - export TRAVIS_TAG="v1.0.1"
-#   - export TRAVIS_COMMIT="dcdf8bd8af8d0144fb830cdccbf4ad048d946a9c"
-  - git tag $TRAVIS_TAG 
-  #- echo "$TRAVIS_TAG" "$TRAVIS_COMMIT"
-  #- git tag "$TRAVIS_TAG" "$TRAVIS_COMMIT"
 deploy:
   provider: releases
   api_key:
-    secure: YeP33TYT4M9lINGBZscSBRUpAQWJNz/bQS0oaPdvUklF5noKccUsVUgMbtqy7VxIYes8UsVQTtiOExMRVq2j6Gcz7oiLpG5stmFERY7cZG4SKI9Q4lTMcZZZFn5IO0FP4+WF36ztuOGXXi8y40nlYqq/A2NS93C1soZ9Wb/nihmhGIoBOIBo9yfyt7n/qTiVneMeDs66nzc8K3GmzaP9vA2ydWprSrzIDdUYW474pCj7/JzXN1S/3ACZtA7Yt6BQujaacZOhjIjPh/GIYscN5R1t1q0VuFC4AFpxKk52syLNUuf7t25+1simPCS+BhL8BnqsPeXyuJc1ZwHfCmaZ8anqBX75Dsdy+3yQBqHDOfR8nRRrA3YZtViXzeAc+ki6zlHmbc717rxa8XyWecHwBkI/8c4xiKkOOf1DOfv+M/u1VvOz0Y+1stkg6VCwXVAqMAu3YIlHRdl0HyIZx9myXLo5qHLSsvCNzSwp5zdjm1+6KHmY5rTTSOdi9R1yHUGQK+aSrVb2bf5cX6ONCEPMgLnrHCaMSy/+TfX3/0JO69XGOEWiIMXcnRvjDjBIOaNNrnSwkXIGe0sq+96IcSCZj6E0SVbhLuWS6fKTkpn5mV1iKqkNPIGUD++a8BxC09DDnE0+9vbMFQGPuWoEaZ68DDs5oP2RGlYDzmlIGZLfsIw=
-  file_glob: true
-  file: _bin/.*
-  draft: true
+    secure: iuvw8dgg91MG80BXaZYHGORuU8p1R3wdF53TveExWEThMxyrpalD+7n3mpPkc5BKUv9ZsiwrwTEAD1qu2o1Ki6qVS+QlB2RqkvP2g8LV0sE9DB+lvGyYOkNEDd44kFLcoAmGkyQSWZuwaf/AW0AQx1i3BeK7lXzwcKJukLIW//0ACwwGNtE9g1YdyptiOD3WXIHV+fb0dpLzYezQsGhyWeSGiFqHLEfE0o0YuyOmf3majeQcrKHfpNW0VeLiGmij0TnMpKzij/lsqHJPJEcpdVObF0y4GfAW1Ur+IzER92l5lu+cDya/sX5aexwatRRA6YbUGy8+EcrM8C/YeWWNKbSe3ogd5rqP7Y0YWVpks7PpInS4T5J/8/KQHMlQy6lNPpQdroz/fNZ/xKXImNCQA8tpl9Ge0w2eGvuaF7NTUe4nbvNwoJSHTjP8JQVxumyjabkSe05WzC6QuKJcXuBFm6TI2OnxaKCqu2Knpcc6tO6KD0yBI8vZSvb5bFskY2JRCwP58oZ9kvhUHvaWmJh4Tn2T/W8Dog3Tm78KeaCLbZh9kZSmZbV3OA9bgdgIJ9cRZf8+cklHfn93wnaZqG66rBKJCWhtpVyIII4U5Ox/qW2LCzs9v/+kI0Fbn5h2S9PlEBtm2C5rWWYe+dlaZbbD1s0bO802QLnKGsuK7WxpwsA=
+  file: _bin/*
+  on:
+    repo: samuelchong/travis_test
+    branch: development/v1.0
   skip_cleanup: 'true'
-#   tag_name: $TRAVIS_TAG
-#   target_commitish: $TRAVIS_COMMIT
-#   overwrite: true
-on:
-  tags: true
-  repo: samuelchong/travis_test
-  branches:
-    only:
-      - /master
-      - /^development\/v.*$/
-      - /^release\/v.*$/
-      - /^feature\/.*$/
-      - /^v.*$/
-  
