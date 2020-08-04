@@ -44,8 +44,8 @@ deploy:
 #   tag_name: $TRAVIS_TAG
 #   target_commitish: $TRAVIS_COMMIT
 #   overwrite: true
-#   on:
-#     tags: true
+on:
+  tags: true
 #     repo: samuelchong/travis_test
 #     branches:
 #       only:
