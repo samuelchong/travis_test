@@ -29,10 +29,10 @@ script:
   - go test -v ./...
 before_deploy:
   - export TRAVIS_TAG="v2.3.6"
-  - export TRAVIS_COMMIT="dcdf8bd8af8d0144fb830cdccbf4ad048d946a9c"
-  # - git tag $TRAVIS_TAG
-  - echo "$TRAVIS_TAG" "$TRAVIS_COMMIT"
-  - git tag "$TRAVIS_TAG" "$TRAVIS_COMMIT"
+#   - export TRAVIS_COMMIT="dcdf8bd8af8d0144fb830cdccbf4ad048d946a9c"
+  - git tag $TRAVIS_TAG 
+  #- echo "$TRAVIS_TAG" "$TRAVIS_COMMIT"
+  #- git tag "$TRAVIS_TAG" "$TRAVIS_COMMIT"
 deploy:
   provider: releases
   api_key:
